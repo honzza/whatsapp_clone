@@ -22,7 +22,7 @@ const Login = ({ onIdSubmit }) => {
           <Form.Label>Enter Your Id</Form.Label>
           <Form.Control type="text" ref={idRef} required />
         </Form.Group>
-        <Button type="submit" className="mr-2">
+        <Button type="submit" style={{ marginRight: 5 }}>
           Login
         </Button>
         <Button onClick={createNewId} variant="secondary">

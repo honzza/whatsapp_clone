@@ -1,16 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
+import useLocalStorage from "../hooks/useLocalStorage";
 import Login from "./Login";
 
 const App = () => {
-  const [id, setId] = useState();
-  return (
-    <>
-      {id}
-      <Login onIdSubmit={setId} />;
-    </>
-  );
+  const [id, setId] = useLocalStorage("id");
+  return <>{id ? <h1>Dashboard</h1> : <Login onIdSubmit={setId} />}</>;
 };
 
 export default App;
 
-//14:37
+//20:00
